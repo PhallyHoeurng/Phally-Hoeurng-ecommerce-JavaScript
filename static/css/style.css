@@ -83,3 +83,48 @@ input{
 .material-icons{
     color:rgb(146, 111, 14);
 }
+
+table, td, th {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+td:nth-child(2){
+    text-align: start;
+    width: 570px;
+}
+td:nth-child(3){
+    text-align: start;
+}
+td:nth-child(1){
+    width: 8px;
+}
+
+
+.footer {
+    text-align: center;
+}
+.search button{
+    border-radius: 10px solid black;
+    padding: 10px;
+    margin: 10px 0px;
+    margin-left: 100px;
+    width : 150px;
+    background-color: rgba(68, 68, 255, 0.886);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+} 
+#trash{
+    color: red;
+    cursor: pointer;
+    font-size: 30px;
+}
