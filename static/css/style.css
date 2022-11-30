@@ -1,39 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.navbar {
-    width: 100%;
-    background-color: rgb(73, 110, 233);
-    overflow: auto;
+nav{
+    background: rgb(76, 76, 237);
+    padding: 10px;
+    
 }
-.navbar a {
-    margin-top: 30px;
-    float: left;
-    padding: 12px;
-    color: rgb(255, 255, 255);
+
+main nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+main nav ul {
+    display: flex;
+    align-items: center;
+
+}
+
+main nav ul li {
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 5px;
+    list-style: none;
+}
+
+main nav ul li a {
     text-decoration: none;
-    font-size: 17px;
-}
-.navbar img{
-    background-color: burlywood;
-    border-radius: 80%;
+color: white;
 }
 
-.navbar a:hover {
-    background-color: #000;
-}
-  
-.active {
-    margin-left: -165px;
-
-}
-.navbar{
-display: flex;
-justify-content: space-evenly;
-}
-.navbar img{
-    margin-right: -100px;
+#search{
+    margin: 30px;
 }
 
 .input {
@@ -41,90 +40,217 @@ justify-content: space-evenly;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    
+
 }
-input{
+
+input {
     padding: 8px;
     width: 50%;
     border: solid 2px gray;
+}
+
+.form-input button{
+    display: flex;
+    background: rgb(76, 76, 237);
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    justify-content: center;
+}
+.add-book{
+    display: flex;
+    justify-content: flex-end;margin: 10px;
+
+}
+.add-book button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(70, 70, 219);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.logo{
+    background: white;
+    border-radius: 40px;
+    padding: 5px;
+    position: relative;
+    left: 14rem;
 }
 .input a {
     padding: 10px;
     background-color: rgb(145, 167, 231);
     color: black;
+}
+
+.navbar li:hover {
+    background-color: rgb(2, 2, 2);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3%;
+}
+
+.product {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.product h4 ,span{
+    margin-left: 25px;
+}
+.product img{
+    margin: 20px;
+    width: 200px;
+    height: 288px;
+
+}
+.delivery{
+    margin-left: 160px;
  }
-.books{
-    display: flex;
-    margin: 50px;
-    justify-content: space-between;
+ 
+.order {
+    color: rgb(26, 99, 245);
+    font-size: 30px;
 }
-.books span:hover {
-    background-color: rgb(244, 239, 239);
-    padding: 10px;
-} 
+.main-star {
+    margin-left: 20px;
+}
 
-.contain1,.contain2 , .contain3{
-    display: flex;
-    width: 78%;
-    margin: auto;
-
-}
-.product{
-    margin: 30px 30px 50px 20px;
-}
-.contain4{
-    padding: 60px;
-    width: 85%;
-    margin: auto;
-}
-.lo{
-    color: rgb(60, 183, 7);
-}
 .material-icons{
-    color:rgb(146, 111, 14);
+    display: flex;
+    
+}
+.material-icons {
+    color: rgb(1, 161, 25); 
 }
 
-table, td, th {
+
+
+th {
+    padding: 20px;
+    border: solid 1px;
+}
+
+table,
+td {
     border: 1px solid;
     padding: 10px;
     text-align: center;
-
-    
 }
 table {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     border-collapse: collapse;
-    
 }
 td:nth-child(2){
     text-align: start;
-    width: 570px;
 }
-td:nth-child(3){
-    text-align: start;
+th:nth-child(2) {
+    width: 60%;
 }
-td:nth-child(1){
-    width: 8px;
+th:nth-child(3) {
+    width: 5%;
 }
-
-
-.footer {
-    text-align: center;
+th:nth-child(4) {
+    width: 5%;
 }
-.search button{
-    border-radius: 10px solid black;
-    padding: 10px;
-    margin: 10px 0px;
-    margin-left: 100px;
-    width : 150px;
-    background-color: rgba(68, 68, 255, 0.886);
-    border-radius: 10px;
-    border: none;
-    color: white;
-    cursor: pointer;
-} 
-#trash{
+th:nth-child(1) {
+    width: 1%;
+}
+.form{
+    width: 60%;
+    margin: auto;
+}
+.form .form-input{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.form .form-input input,label{
+    width: 100%;
+    margin: auto;
+    margin: 10px;
+}
+.form .form-input form{
+   width: 70%;
+   padding-right: 20px;
+}
+.trash {
     color: red;
     cursor: pointer;
     font-size: 30px;
+}
+
+
+footer{
+    background-color: rgb(79, 79, 255);
+    height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+footer img{
+    height: 60px;
+    margin: 30px;
+}
+
+dialog {
+    position: fixed;
+    top: 5vh;
+    left: 30%;
+    width: 40%;
+    z-index: 10;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(26, 25, 25, 0.26);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+dialog header {
+    color: white;
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+dialog section {
+    padding: 10px;
+
+}
+
+dialog menu {
+    padding: 1rem;
+    margin: 0;
+}
+dialog menu button{
+    padding: 10px;
+    width: 20%;
+}
+
+dialog label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+dialog input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+dialog input:focus {
+  background-color: #f0e6fd;
+  outline: none;
+  border-color: var(--main-color-light);
 }
