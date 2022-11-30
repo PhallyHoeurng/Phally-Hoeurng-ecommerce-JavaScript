@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    width: 100%;
+    background-color: rgb(73, 110, 233);
+    overflow: auto;
+}
+.navbar a {
+    margin-top: 30px;
+    float: left;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar img{
+    background-color: burlywood;
+    border-radius: 80%;
+}
+
+.navbar a:hover {
+    background-color: #000;
+}
+  
+.active {
+    margin-left: -165px;
+
+}
+.navbar{
+display: flex;
+justify-content: space-evenly;
+}
+.navbar img{
+    margin-right: -100px;
+}
+
+.input {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+input{
+    padding: 8px;
+    width: 50%;
+    border: solid 2px gray;
+}
+.input a {
+    padding: 10px;
+    background-color: rgb(145, 167, 231);
+    color: black;
+ }
+.books{
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+}
+.books span:hover {
+    background-color: rgb(244, 239, 239);
+    padding: 10px;
+} 
+
+.contain1,.contain2 , .contain3{
+    display: flex;
+    width: 78%;
+    margin: auto;
+
+}
+.product{
+    margin: 30px 30px 50px 20px;
+}
+.contain4{
+    padding: 60px;
+    width: 85%;
+    margin: auto;
+}
+.lo{
+    color: rgb(60, 183, 7);
+}
+.material-icons{
+    color:rgb(146, 111, 14);
+}
