@@ -7,263 +7,65 @@
     <title>costomer</title>
     <link rel="stylesheet" href="./static/css/style.css">
     <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="header">
-        <div class="navbar">
-            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
-            <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
-            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-            <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-            <img src="/logo/logo.png" alt="" width="8%">
-        </div>
+    <main class="header">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a class="searching" href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+                </li>
+                <li>
+                    <a class="contact" href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+                </li>
+            </ul>
+            <div id="logo">
+                <img  class="logo" src="static/imges/logo.png" alt="" width="13%">
+            </div>
+        </nav>
+        
+    </main>
+    <div id="search">
         <div class="input">
-            <input type="text" placeholder="search book here">
+            <input id="searchBook" type="text"placeholder="search book here">
             <a href="#"><i class="fa fa-fw fa-search"></i> </a> 
         </div>
-        
     </div>
-    
-    <div class="contain">
-        <div class="contain1">
-            <div class="product">
-                <img src="./static/imges/គន្លឹះរៀនពូកែ.jpg" alt=""   width=" 200px" height="288px">
-                <h4>វិធីនិយាយ</h4>
-                <span>Price $5.50</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/charlott.jpg"   width=" 200px" height="288px">
-                <h4>Charlotte's</h4>
-                <span>Price $10.50</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/JUNGLE.jpg" alt=""   width=" 200px" height="288px">
-                <h4>The Jungle book</h4>
-                <span>Price $3.50</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/JOHN.jpg" alt=""   width=" 200px" height="288px">
-                <h4>JOHN GRISHAM</h4>
-                <span>Price $30.50</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contain2">
-            <div class="product">
-                <img src="./static/imges/nANCY.JPG" alt=""  width=" 200px" height="288px">
-                <h4>Nancy Drew</h4>
-                <span>Price $30.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/jungle.webp" alt=""  width=" 200px" height="288px">
-                <h4>JUNGLE</h4>
-                <span>Price $10.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/JOHN.jpg" alt=""  width=" 200px" height="288px">
-                <h4>JOHN GRISHAM</h4>
-                <span>Price $30.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/STORY BOOK.jpg" alt=""  width=" 200px" height="288px">
-                <h4>Nancy Drew</h4>
-                <span>Price $30.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="contain3">
-            <div class="product">
-                <img src="./static/imges/ស្គាល់សេ្នហាទេ.jpg" alt=""  width=" 200px" height="288px">
-                <h4>ស្គាល់សេ្នហាទេ</h4>
-                <span>Price $5.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/គន្លឹះរៀនពូកែ.jpg" alt=""  width=" 200px" height="288px">
-                <h4>គន្លឹះរៀនពូកែ</h4>
-                <span>Price $10.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/លក់អារម្មណ៏.jpg" alt=""  width=" 200px" height="288px">
-                <h4>លក់អារម្មណ៏</h4>
-                <span>Price $5.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img src="./static/imges/សារភាពស្នេហា.jpeg" alt=""  width=" 200px" height="288px">
-                <h4>សារភាពស្នេហា</h4>
-                <span>Price $3.00</span>
-                <div class="main-star">
-                    <div class="star-first">
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                        <i class="material-icons" >star</i>
-                    </div>
-                    <div class="delivery">
-                        <i class="material-icons center" >
-                            <i class="lo">local_grocery_store</i>
-                        </i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="container">
     </div>
+    <div id="dialog-info" style="display: none;">
+        <dialog open>
+          <section>
+            <label>Name Product</label>
+            <input id="name-Product" type="text" placeholder="Name Product" />
+
+            <label>Price</label>
+            <input id="price" type="text" placeholder="Price"/>
+
+            <label for="">Img</label> 
+            <input id="image" type="text" placeholder="images"  id="avatar" name="avatar"
+        />
+            <!-- <img  id="imgchange" src="#" alt=""> -->
+          </section>
+  
+          <menu>
+            <button id="cancel">Cancel</button>
+            <button id="create">Create</button>
+          </menu>
+        </dialog>
+    </div>
+    <footer id="contact">
+        <img src="static/imges/gps.png" alt="" width="50px">
+        <img src="static/imges/call.png" alt="" width="50px">
+        <img src="static/imges/email.png" alt="" width="50px">
+    </footer>
 </body>
-<script src="js/costomer.js"></script>
+<script src="./static/js/customer.js"></script>
 </html>
