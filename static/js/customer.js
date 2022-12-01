@@ -2,78 +2,75 @@
 let search = document.querySelector("#search");
 let ressearch = document.querySelector(".searching");
 let home = document.querySelector(".active");
-
 let dialog = document.querySelector("#dialog-info");
 let searchBookInput = document.getElementById('searchBook')
 
+
+//hide input
 function hide(element) {
     element.style.display = "none"
 }
 
-// function hideHomePage() {
-//     hide(search)
-// }
-
 home.addEventListener("click", function(){
     hide(search)
 })
+
+//show input
 function show(element) {
     element.style.display = "block"
 }
 function showinput() {
     show(search)
 }
-
 ressearch.addEventListener("click", showinput)
 
 
 
+
 let products = [
-    { id: 1, name: 'គន្លឹះរៀនពូកែ', price: "$  5.00", img: 'static/imges/speaking.jpg', rate: 5 },
+    { id: 1, name: 'គន្លឹះរៀនពូកែ',price:5.25, img: 'static/img/speaking.jpg', rate: 5 },
 
-    { id: 2, name: "Charlotte's", price: "$  5.00", img: 'static/imges/charlott.jpg', rate: 5 },
+    { id: 2, name: "Charlotte's", price:5.55 , img: 'static/img/charlott.jpg', rate: 5 },
 
-    { id: 3, name: 'The Jungle book', price: "$  8.00", img: 'static/imges/JUNGLE.jpg', rate: 4 },
+    { id: 3, name: 'The Jungle book', price: 8.25, img: 'static/img/JUNGLE.jpg', rate: 4 },
 
-    { id: 4, name: 'JOHN GRISHAM', price: "$  30.00", img: 'static/imges/JOHN.jpg', rate: 3 },
+    { id: 4, name: 'JOHN GRISHAM', price: 30.55, img: 'static/img/JOHN.jpg', rate: 3 },
 
-    { id: 5, name: 'Nancy Drew', price: "$  22.00", img: 'static/imges/nANCY.JPG', rate: 5 },
+    { id: 5, name: 'Nancy Drew', price: 22.77, img: 'static/img/nANCY.JPG', rate: 5 },
 
-    { id: 6, name: 'JUNGLE', price: "$  6.00", img: 'static/imges/jungle.webp', rate: 4 },
+    { id: 6, name: 'JUNGLE', price: 6.99, img: 'static/img/jungle.webp', rate: 4 },
 
-    { id: 7, name: 'JOHN GRISHAM', price: "$  5.00", img: 'static/imges/JOHN.jpg', rate: 5 },
+    { id: 7, name: 'JOHN GRISHAM', price: 5.44, img: 'static/img/JOHN.jpg', rate: 5 },
 
-    { id: 8, name: 'STORY BOOK', price: "$   10.22", img: 'static/imges/STORY%20BOOK.jpg', rate: 3 },
+    { id: 8, name: 'STORY BOOK', price: 10.25, img: 'static/img/STORY%20BOOK.jpg', rate: 3 },
 
-    { id: 9, name: 'ស្គាល់សេ្នហាទេ', price: "$  20.22", img: 'static/imges/knowlove.jpg', rate: 5 },
+    { id: 9, name: 'ស្គាល់សេ្នហាទេ', price: 20.25, img: 'static/img/knowlove.jpg', rate: 5 },
 
-    { id: 10, name: 'គន្លឹះរៀនពូកែ', price: "$  19.00", img: 'static/imges/study.jpg', rate: 5 },
+    { id: 10, name: 'គន្លឹះរៀនពូកែ', price: 19.99, img: 'static/img/study.jpg', rate: 5 },
 
-    { id: 11, name: 'លក់អារម្មណ៏', price: "$  5.50", img: 'static/imges/felling.jpg', rate: 5 },
+    { id: 11, name: 'លក់អារម្មណ៏', price: 5.55, img: 'static/img/felling.jpg', rate: 5 },
 
-    { id: 12, name: 'សារភាពស្នេហា', price: "$  33.00", img: 'static/imges/love.jpg', rate: 5 },
+    { id: 12, name: 'សារភាពស្នេហា', price: 50.99, img: 'static/img/love.jpg', rate: 5 },
 ]
 
+//display prodcuts
 
 function displayProduct() {
-    let contaner = document.querySelector(".container");
-    // console.log( contaner);
+    let container = document.querySelector(".container");
     for (let pro of products) {
         let product = document.createElement("div");
         product.className = "product";
 
-
         let img = document.createElement("img");
         img.src = pro.img
         product.append(img);
-        // console.log(img)
 
         let name = document.createElement("h4");
         name.textContent = pro.name;
         product.appendChild(name);
 
         let createSpan = document.createElement("span");
-        createSpan.textContent = pro.price;
+        createSpan.textContent = pro.price + " $ ";
         product.appendChild(createSpan);
 
         let mianStar = document.createElement("div");
@@ -82,8 +79,6 @@ function displayProduct() {
         let star = document.createElement("div");
         star.className = "star-first";
         mianStar.appendChild(star);
-
-
 
         for (let i = 0; i < pro.rate; i++) {
 
@@ -94,8 +89,6 @@ function displayProduct() {
             mianStar.appendChild(idd);
 
             product.appendChild(mianStar);
-
-            // console.log(mianStar);
         }
 
         let order = document.createElement("div");
@@ -109,17 +102,17 @@ function displayProduct() {
         ordericon.className = "order";
         ordericon.textContent = "local_grocery_store"
         ordericon.style.cursor = "pointer";
-        ordericon.addEventListener("click", toCreat)
+        ordericon.addEventListener("click", byThebook)
         materialOrder.appendChild(ordericon);
 
 
         product.appendChild(order)
-        contaner.appendChild(product);
+        container.appendChild(product);
     }
-
-    // console.log(contaner);
-
 }
+
+///search books
+
 function searchBook(event) {
     let inputText = searchBookInput.value.toLowerCase();
 
@@ -136,19 +129,19 @@ function searchBook(event) {
         }
         value.style.display = displayStyle;
     }
-
 }
+
 searchBookInput.addEventListener("keyup", searchBook);
 displayProduct()
 
-function toCreat(event){
+//aleart dialog by book
+function byThebook(event){
     let nameProduct = document.querySelector("#name-Product");
-    console.log("nameProduct");
     show(dialog)
 }
 
 let createBtn = document.querySelector("#create");
-createBtn.addEventListener("click", function(){
-    console.log("hi");
+    createBtn.addEventListener("click", function(){
+    console.log("by this book");
     hide(dialog);
 })

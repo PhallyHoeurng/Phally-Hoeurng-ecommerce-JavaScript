@@ -80,9 +80,10 @@ input {
     position: relative;
     left: 14rem;
 }
+
 .input a {
     padding: 10px;
-    background-color: rgb(145, 167, 231);
+    background-color: rgb(136, 166, 255);
     color: black;
 }
 
@@ -127,10 +128,8 @@ input {
     
 }
 .material-icons {
-    color: rgb(1, 161, 25); 
+    color: rgb(255, 176, 4); 
 }
-
-
 
 th {
     padding: 20px;
@@ -148,20 +147,31 @@ table {
     margin: auto;
     border-collapse: collapse;
 }
+th{
+    background-color: rgb(211, 221, 251);
+
+}
 td:nth-child(2){
-    text-align: start;
+    text-align: center;
+}
+th,td:nth-child(1) {
+    width: 5%;
+    font-weight: bold
+    
 }
 th:nth-child(2) {
-    width: 60%;
+    width: 10%;
 }
 th:nth-child(3) {
     width: 5%;
 }
 th:nth-child(4) {
-    width: 5%;
+    width: 4%;
 }
-th:nth-child(1) {
-    width: 1%;
+
+.imgTable{
+    width: 200px;
+    height: 290px;
 }
 .form{
     width: 60%;
@@ -182,11 +192,15 @@ th:nth-child(1) {
    padding-right: 20px;
 }
 .trash {
-    color: red;
+    color: rgb(255, 0, 0);
     cursor: pointer;
-    font-size: 30px;
+    margin: 10px
 }
-
+.edit {
+    color: rgb(0, 68, 255);
+    cursor: pointer;
+    margin: 10px;
+}
 
 footer{
     background-color: rgb(79, 79, 255);
@@ -195,6 +209,7 @@ footer{
     text-align: center;
     justify-content: center;
 }
+
 footer img{
     height: 60px;
     margin: 30px;
@@ -204,53 +219,77 @@ dialog {
     position: fixed;
     top: 5vh;
     left: 30%;
-    width: 40%;
+    width: 35%;
     z-index: 10;
     border-radius: 15px;
     border: none;
-    box-shadow: 0 2px 8px rgba(26, 25, 25, 0.26);
-    padding: 0;
-    margin: 0;
+    box-shadow: 0px 0px 5px 0px gray;
     overflow: hidden;
-}
-dialog header {
-    color: white;
-    font-size: 1.25rem;
-    width: 100%;
-    padding: 1rem;
 }
 
 dialog section {
     padding: 10px;
-
+    margin: 10%; 
 }
 
 dialog menu {
-    padding: 1rem;
-    margin: 0;
+    padding: 10px;
+    margin-left: 50px;
 }
+
 dialog menu button{
     padding: 10px;
-    width: 20%;
+    width: 25%;
 }
 
 dialog label {
     font-weight: bold;
     display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 dialog input {
   display: block;
-  width: 100%;
+  width: 90%;
   border: 1px solid #ccc;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
-dialog input:focus {
-  background-color: #f0e6fd;
-  outline: none;
-  border-color: var(--main-color-light);
+
+.contain {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 80px;
+    float: left;
+    margin-left: 100px;
+}
+
+.showdata{
+    margin-top: 60px;
+    margin-left: 100px;
+
+}
+p{
+    margin-top: 20px;
+}
+#applyButton {
+    padding: 12px;
+    border:none;
+    border-radius: 40px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 120px;
+    background-color: rgb(61, 151, 255);
+    color: white;
+}
+
+.contain{
+    display: flex;
+    margin: 100px;
+}
+#username , #email , #sms {
+    margin: 20px;
+}
+#email{
+    margin-left: 46px;
+}
+#sms{
+    margin-left: 95px;
 }
