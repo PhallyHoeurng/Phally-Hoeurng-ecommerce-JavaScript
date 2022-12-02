@@ -176,8 +176,8 @@ function deleteProduct (event){
     products.splice(index,1)
     saveBook();
     createtable();
-
 }
+
 let lengthPro = products.length;
 
 function editProduct(event){
