@@ -1,52 +1,36 @@
-let containt5 = document.getElementById('contain5');
 let form_field = document.getElementById('dialog-info');
+const  containt5 = document.querySelector("#contain5");
 let  create_Book = document.querySelector("#create");
 
-
-// display dilog
-
-function show(element){
-    element.style.display = "block"
-}
-
-function onAddBook(){
-    show(form_field);
-}
-//btnCencel
-function hide(element){
-    element.style.display = "none"
-}
-
-function cencelBook(){
-    hide(form_field);
-}
+create_Book.addEventListener("click", toCreate)
 
 //data prodcut
-
 let products = [
-    {name: 'វិធីនិយាយ', price:5.25, img: 'img/speaking.jpg', rate: 4},
+    {name: 'វិធីនិយាយ', price:5.25, img: 'static/img/speaking.jpg', rate: 4},
     
-    {name: "Charlotte's", price:5.55, img: 'img/charlott.jpg', rate: 5},
+    {name: "Charlotte's", price:5.55, img: 'static/img/charlott.jpg', rate: 5},
     
-    {name: 'The Jungle book', price:8.25, img: 'img/JUNGLE.jpg', rate: 3},
+    {name: 'The Jungle book', price:8.25, img: 'static/img/JUNGLE.jpg', rate: 3},
      
-    {name: 'JOHN GRISHAM', price:30.55, img: 'img/JOHN.jpg', rate: 3},
+    {name: 'JOHN GRISHAM', price:30.55, img: 'static/img/JOHN.jpg', rate: 3},
     
-    {name: 'Nancy Drew', price:22.77, img: 'img/nANCY.JPG', rate: 2},
+    {name: 'Nancy Drew', price:22.77, img: 'static/img/nANCY.JPG', rate: 2},
     
-    {name: 'JUNGLE', price:6.99, img: 'img/jungle.webp', rate: 4},
+    {name: 'JUNGLE', price:6.99, img: 'static/img/jungle.webp', rate: 4},
     
-    {name: 'JOHN GRISHAM', price:5.44, img: 'img/JOHN.jpg', rate: 5},
+    {name: 'JOHN GRISHAM', price:5.44, img: 'static/img/JOHN.jpg', rate: 5},
     
-    {name: 'STORY BOOK', price:10.25, img: 'img/STORY%20BOOK.jpg', rate: 3},
+    {name: 'STORY BOOK', price:10.25, img: 'static/img/STORY%20BOOK.jpg', rate: 3},
      
-    {name: 'ស្គាល់សេ្នហាទេ', price:20.25, img: 'img/knowlove.jpg', rate: 5},
+    {name: 'ស្គាល់សេ្នហាទេ', price:20.25, img: 'static/img/knowlove.jpg', rate: 5},
     
-    {name: 'គន្លឹះរៀនពូកែ', price:19.99, img: 'img/study.jpg', rate: 5},
+    {name: 'គន្លឹះរៀនពូកែ', price:19.99, img: 'static/img/study.jpg', rate: 5},
     
-    {name: 'លក់អារម្មណ៏', price:5.55, img: 'img/felling.jpg', rate: 5},
-    
-    {name: 'សារភាពស្នេហា', price:50.09, img: 'img/love.jpg', rate: 5},
+    {name: 'លក់អារម្មណ៏', price:150.55, img: 'static/img/felling.jpg', rate: 5},
+    {name: 'PRAYER BOOK', price:10.09, img: 'static/img/prayer book.jpg', rate: 5},
+    {name: 'មច្ចាទិដ្ឋិកថា', price:30.89, img: 'static/img/bodi.jpg', rate: 5},
+    {name: 'អភិធម្ម', price:19.09, img: 'static/img/bodish.jpg', rate: 5},
+
 ]
 
 //create thead
@@ -56,24 +40,27 @@ const listthead = [
 
 //localstorage 
 function saveBook(){
-    localStorage.setItem("products",JSON.stringify(products))
+    localStorage.setItem("products",JSON.stringify(products));
 }
 function loadBook(){
-    const storage = JSON.parse(localStorage.getItem("product"))
-    if(storage.lenght > 0){
+    const storage = JSON.parse(localStorage.getItem("products"));
+    if(storage !== null){
         products = storage 
-    }
-    else{
-        localStorage.removeItem("product")
+    }else  {
+        localStorage.removeItem(products);
     }
 }
 
-
 ///create tble 
+function createtable() {
+    table = document.querySelector('table');
+    table.remove();
+    table = document.createElement('table');
 
-function table() {
-    let table = document.createElement('table');
-    let thead = document.createElement('thead');
+    thead = document.createElement('thead');
+
+    containt5.appendChild(table);
+
     for (let value of listthead) {
         let tr = document.createElement('tr');
         let th = document.createElement("th");
@@ -92,11 +79,13 @@ function table() {
         tr.appendChild(th3);
         thead.appendChild(tr);
         table.appendChild(thead);
+        console.log(thead)
     }
 
-    for (let value of products) {
-
+    for (let index = 0 ; index < products.length; index++) {
+        product = products[index];
         let tr = document.createElement('tr');
+        tr.dataset.index=index;
         let td = document.createElement("td");
         let td1 = document.createElement("td");
         let td2 = document.createElement("td");
@@ -105,18 +94,18 @@ function table() {
         let li1 = document.createElement("i");
         li1.className = "fa fa-fw fa-trash";
         li1.classList.add("trash");
-
+        li1.addEventListener("click",deleteProduct);
         let li2 = document.createElement("i");
         li2.className = "fa fa-fw fa-edit";
         li2.classList.add("edit");
+        li2.addEventListener("click", editProduct)
 
         let img = document.createElement("img");
         img.className = "imgTable";
-        img.src = value.img;
+        img.src = product.img;
     
-
-        td.textContent = value.name;
-        td2.textContent = value.price + " $ ";
+        td.textContent = product.name;
+        td2.textContent = product.price + " $ ";
 
         td3.appendChild(li1)
         td3.appendChild(li2)
@@ -126,30 +115,87 @@ function table() {
         tr.appendChild(td1);
         tr.appendChild(td2)
         tr.appendChild(td3);
+
         thead.appendChild(tr);
         table.appendChild(thead);
+        console.log(table)
     }
     containt5.appendChild(table)
 }
-table()
+
+function clearDialogPoduct(){
+    
+    document.querySelector("#name-Product").value= ""
+    document.querySelector("#price").value =""
+    document.querySelector("#image").value=""
+
+}
 
 /// appand create new prodcut
 function toCreate (event){
+
     let priceForm = document.querySelector("#price").value;
     let imgForm = document.querySelector("#image").value;
     let proForm = document.querySelector("#name-Product").value;
-
     let newProdcut = {
         name:proForm,
         img : imgForm,
         price: priceForm,
     }
-
-    products.push(newProdcut);
+    // products.push(newProdcut);
+    products.splice(lengthPro,0,newProdcut)
     hide(form_field);
-    console.log(products);
     saveBook();
-    table();
+    createtable(); 
+    clearDialogPoduct()
 
 }
-create_Book.addEventListener("click", toCreate)
+createtable();
+
+// display dilog
+function show(element){
+    element.style.display = "block"
+}
+
+function onAddBook(){
+    clearDialogPoduct()
+    show(form_field);
+    lengthPro=index
+}
+//btnCencel
+function hide(element){
+    element.style.display = "none"
+}
+function cencelBook(){
+    hide(form_field);
+}
+
+function deleteProduct (event){
+    
+    event.preventDefault();
+    let index = event.target.parentElement.parentElement.dataset.index;
+    products.splice(index,1)
+    saveBook();
+    createtable();
+
+}
+let lengthPro = products.length;
+
+function editProduct(event){
+    document.querySelector("menu").lastElementChild.textContent="Edit";
+    let index = event.target.parentElement.parentElement.dataset.index;
+
+    let prodcut=products[index];
+    document.querySelector("#name-Product").value=prodcut.name;
+    document.querySelector("#price").value=prodcut.price
+    document.querySelector("#image").value=prodcut.img
+    lengthPro=index
+    show(form_field)
+    products.splice(index,1)
+
+
+}
+
+// loadBook();  //
+saveBook();   // save
+createtable();

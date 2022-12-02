@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seller</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a class="active" href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                    <a class="active" href="customer.html"><i class="fa fa-fw fa-home"></i> Home</a>
                 </li>
             </ul>
             <div>
@@ -26,6 +26,8 @@
     </div>
     
     <div id="contain5">
+        <table>
+        </table>
     </div>
     <div id="dialog-info" style="display: none;">
         <dialog open>
@@ -35,10 +37,11 @@
             <input id="name-Product" type="text" placeholder="Name Product" />
             
             <label>Price</label>
-            <input id="price" type="text" placeholder="Price"/>
+            <input id="price" type="number" placeholder="Price"/>
 
             <label>Link or Name</label> 
             <input id="image" type="text" placeholder="images"  id="avatar" name="avatar"/>
+            
           </section>
   
           <menu>
@@ -48,5 +51,5 @@
         </dialog>
     </div>
 </body>
-<script src="./js/seller.js"></script>
+<script src="static/js/seller.js"></script>
 </html>

@@ -1,60 +1,27 @@
-
 let search = document.querySelector("#search");
 let ressearch = document.querySelector(".searching");
 let home = document.querySelector(".active");
 let dialog = document.querySelector("#dialog-info");
 let searchBookInput = document.getElementById('searchBook')
+let cancel = document.querySelector("#cancel");
 
 
-//hide input
-function hide(element) {
-    element.style.display = "none"
+let products = [];
+
+//localstorage 
+function saveBook(){
+    localStorage.setItem("products",JSON.stringify(products));
 }
-
-home.addEventListener("click", function(){
-    hide(search)
-})
-
-//show input
-function show(element) {
-    element.style.display = "block"
+function loadBook(){
+    const storage = JSON.parse(localStorage.getItem("products"));
+    if(storage !== null){
+        products = storage 
+    }else  {
+        localStorage.removeItem(products);
+    }
+    
 }
-function showinput() {
-    show(search)
-}
-ressearch.addEventListener("click", showinput)
-
-
-
-
-let products = [
-    { id: 1, name: 'គន្លឹះរៀនពូកែ',price:5.25, img: 'static/img/speaking.jpg', rate: 5 },
-
-    { id: 2, name: "Charlotte's", price:5.55 , img: 'static/img/charlott.jpg', rate: 5 },
-
-    { id: 3, name: 'The Jungle book', price: 8.25, img: 'static/img/JUNGLE.jpg', rate: 4 },
-
-    { id: 4, name: 'JOHN GRISHAM', price: 30.55, img: 'static/img/JOHN.jpg', rate: 3 },
-
-    { id: 5, name: 'Nancy Drew', price: 22.77, img: 'static/img/nANCY.JPG', rate: 5 },
-
-    { id: 6, name: 'JUNGLE', price: 6.99, img: 'static/img/jungle.webp', rate: 4 },
-
-    { id: 7, name: 'JOHN GRISHAM', price: 5.44, img: 'static/img/JOHN.jpg', rate: 5 },
-
-    { id: 8, name: 'STORY BOOK', price: 10.25, img: 'static/img/STORY%20BOOK.jpg', rate: 3 },
-
-    { id: 9, name: 'ស្គាល់សេ្នហាទេ', price: 20.25, img: 'static/img/knowlove.jpg', rate: 5 },
-
-    { id: 10, name: 'គន្លឹះរៀនពូកែ', price: 19.99, img: 'static/img/study.jpg', rate: 5 },
-
-    { id: 11, name: 'លក់អារម្មណ៏', price: 5.55, img: 'static/img/felling.jpg', rate: 5 },
-
-    { id: 12, name: 'សារភាពស្នេហា', price: 50.99, img: 'static/img/love.jpg', rate: 5 },
-]
-
 //display prodcuts
-
 function displayProduct() {
     let container = document.querySelector(".container");
     for (let pro of products) {
@@ -62,7 +29,7 @@ function displayProduct() {
         product.className = "product";
 
         let img = document.createElement("img");
-        img.src = pro.img
+        img.src= pro.img
         product.append(img);
 
         let name = document.createElement("h4");
@@ -105,17 +72,17 @@ function displayProduct() {
         ordericon.addEventListener("click", byThebook)
         materialOrder.appendChild(ordericon);
 
-
         product.appendChild(order)
         container.appendChild(product);
     }
 }
 
+
+
 ///search books
 
 function searchBook(event) {
     let inputText = searchBookInput.value.toLowerCase();
-
     let productLists = document.getElementsByClassName('product')
     console.log(inputText)
     for (let value of productLists) {
@@ -132,7 +99,7 @@ function searchBook(event) {
 }
 
 searchBookInput.addEventListener("keyup", searchBook);
-displayProduct()
+
 
 //aleart dialog by book
 function byThebook(event){
@@ -145,3 +112,33 @@ let createBtn = document.querySelector("#create");
     console.log("by this book");
     hide(dialog);
 })
+
+//hide input
+function hide(element) {
+    element.style.display = "none"
+}
+
+home.addEventListener("click", function(){
+    hide(search)
+})
+
+//show input
+function show(element) {
+    element.style.display = "block"
+}
+function showinput() {
+    show(search)
+}
+ressearch.addEventListener("click", showinput)
+
+//hidebtn Cancel
+
+function hidebtnCeancel(){
+    hide(dialog)
+
+}
+cancel.addEventListener("click", hidebtnCeancel)
+
+
+loadBook();
+displayProduct()
