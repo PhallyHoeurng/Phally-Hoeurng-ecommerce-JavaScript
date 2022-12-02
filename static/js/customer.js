@@ -132,7 +132,6 @@ function showinput() {
 ressearch.addEventListener("click", showinput)
 
 //hidebtn Cancel
-
 function hidebtnCeancel(){
     hide(dialog)
 
