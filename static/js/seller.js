@@ -171,7 +171,6 @@ function cencelBook(){
 }
 
 function deleteProduct (event){
-    
     event.preventDefault();
     let index = event.target.parentElement.parentElement.dataset.index;
     products.splice(index,1)
