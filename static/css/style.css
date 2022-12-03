@@ -109,6 +109,10 @@ input {
 .product h4 ,span{
     margin-left: 25px;
 }
+span{
+color: rgb(255, 0, 0);
+font-size: larger;
+}
 .product img{
     margin: 20px;
     width: 200px;
@@ -144,6 +148,7 @@ table {
     width: 80%;
     margin: auto;
     border-collapse: collapse;
+
 }
 
 table,
@@ -151,11 +156,14 @@ td {
     border: 1px solid;
     padding: 10px;
     text-align: center;
+    
 }
 
 th {
     padding: 20px;
-    border: solid 1px;
+    border: dotted 1px;
+    color: rgb(106, 106, 255);
+
 }
 th{
     background-color: rgb(211, 221, 251);
