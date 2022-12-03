@@ -30,6 +30,7 @@ function displayProduct() {
 
         let img = document.createElement("img");
         img.src= pro.img
+        img.addEventListener("click",detailProduct)
         product.append(img);
 
         let name = document.createElement("h4");
@@ -37,7 +38,7 @@ function displayProduct() {
         product.appendChild(name);
 
         let createSpan = document.createElement("span");
-        createSpan.textContent = pro.price + " $ ";
+        createSpan.textContent = "Price " + pro.price + " $ ";
         product.appendChild(createSpan);
 
         let mianStar = document.createElement("div");
@@ -47,6 +48,7 @@ function displayProduct() {
         star.className = "star-first";
         mianStar.appendChild(star);
 
+
         for (let i = 0; i < pro.rate; i++) {
 
             let idd = document.createElement("i");
@@ -54,7 +56,6 @@ function displayProduct() {
             idd.classList.add("star");
             idd.textContent = "star"
             mianStar.appendChild(idd);
-
             product.appendChild(mianStar);
         }
 
@@ -77,8 +78,6 @@ function displayProduct() {
     }
 }
 
-
-
 ///search books
 
 function searchBook(event) {
@@ -97,9 +96,7 @@ function searchBook(event) {
         value.style.display = displayStyle;
     }
 }
-
 searchBookInput.addEventListener("keyup", searchBook);
-
 
 //aleart dialog by book
 function byThebook(event){
@@ -138,6 +135,10 @@ function hidebtnCeancel(){
 }
 cancel.addEventListener("click", hidebtnCeancel)
 
+// alert detail book 
+function detailProduct(){
+    window.alert("Welcome! The book is so good for reader make you improve your knowlede. The book is have a lot of idear to share all of you.  ")
+}
 
 loadBook();
 displayProduct()

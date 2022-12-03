@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+/* nan bar page */
 nav{
     background: rgb(76, 76, 237);
     padding: 10px;
@@ -91,14 +93,16 @@ input {
     background-color: rgb(2, 2, 2);
 }
 
+/* style page  customerr*/
+
 .container{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 3%;
+    width: 95%;
+    margin: auto;
 }
 
 .product {
-
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -132,11 +136,14 @@ input {
 }
 .material-icons {
     color: rgb(255, 176, 4); 
+    cursor: pointer;
 }
 
-th {
-    padding: 20px;
-    border: solid 1px;
+/* style table seller page */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
 }
 
 table,
@@ -145,10 +152,10 @@ td {
     padding: 10px;
     text-align: center;
 }
-table {
-    width: 80%;
-    margin: auto;
-    border-collapse: collapse;
+
+th {
+    padding: 20px;
+    border: solid 1px;
 }
 th{
     background-color: rgb(211, 221, 251);
@@ -176,6 +183,8 @@ th:nth-child(4) {
     width: 200px;
     height: 290px;
 }
+
+
 .form{
     width: 60%;
     margin: auto;
@@ -194,6 +203,8 @@ th:nth-child(4) {
    width: 70%;
    padding-right: 20px;
 }
+
+/* style seller page  */
 .trash {
     color: rgb(255, 0, 0);
     cursor: pointer;
@@ -204,6 +215,8 @@ th:nth-child(4) {
     cursor: pointer;
     margin: 10px;
 }
+
+/* dialog */
 
 #dialog-info{
     position: fixed;
@@ -252,14 +265,6 @@ dialog input {
 }
 
 
-.contain {
-    width: 45%;
-    margin: 0 auto;
-    margin-top: 80px;
-    float: left;
-    margin-left: 100px;
-}
-
 .showdata{
     margin-top: 60px;
     margin-left: 100px;
@@ -293,6 +298,7 @@ p{
     margin-left: 95px;
 }
 
+/* footer page customer */
 footer{
     background-color: rgb(79, 79, 255);
     height: 100px;
@@ -304,10 +310,4 @@ footer{
 footer img{
     height: 60px;
     margin: 30px;
-}
-
-
-#form-title p{
-    background-color: red;
-    
 }

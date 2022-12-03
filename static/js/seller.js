@@ -1,7 +1,6 @@
 let form_field = document.getElementById('dialog-info');
 const  containt5 = document.querySelector("#contain5");
 let  create_Book = document.querySelector("#create");
-
 create_Book.addEventListener("click", toCreate)
 
 //data prodcut
@@ -27,9 +26,12 @@ let products = [
     {name: 'គន្លឹះរៀនពូកែ', price:19.99, img: 'static/img/study.jpg', rate: 5},
     
     {name: 'លក់អារម្មណ៏', price:150.55, img: 'static/img/felling.jpg', rate: 5},
+
     {name: 'PRAYER BOOK', price:10.09, img: 'static/img/prayer book.jpg', rate: 5},
+
     {name: 'មច្ចាទិដ្ឋិកថា', price:30.89, img: 'static/img/bodi.jpg', rate: 5},
-    {name: 'អភិធម្ម', price:19.09, img: 'static/img/bodish.jpg', rate: 5},
+
+    {name: 'GOD', price:19.29, img: 'static/img/God.jpg', rate: 3},
 
 ]
 
@@ -160,6 +162,7 @@ function show(element){
 function onAddBook(){
     clearDialogPoduct()
     show(form_field);
+    let index = event.target.parentElement.parentElement.dataset.index;
     lengthPro=index
 }
 //btnCencel
@@ -172,7 +175,7 @@ function cencelBook(){
 
 function deleteProduct (event){
     event.preventDefault();
-    let index = event.target.parentElement.parentElement.dataset.index;
+    let index = onAddBook.target.parentElement.parentElement.dataset.index;
     products.splice(index,1)
     saveBook();
     createtable();
@@ -191,7 +194,6 @@ function editProduct(event){
     lengthPro=index
     show(form_field)
     products.splice(index,1)
-
 
 }
 

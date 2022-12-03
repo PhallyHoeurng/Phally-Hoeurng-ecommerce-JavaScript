@@ -1,6 +1,4 @@
 function submitData() {
-
-    // TODO
     let userName = document.querySelector("#username")
     let email = document.querySelector("#email")
   
