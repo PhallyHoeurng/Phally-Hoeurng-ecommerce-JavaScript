@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>customer</title>
-<link rel="stylesheet" href="static/css/style.css">    <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>seller</title>
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -13,59 +13,40 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-                </li>
-                <li>
-                    <a class="searching" href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-                </li>
-                <li>
-                    <a class="contact" href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-                </li>
-                <li>
-                    <a href="static/login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+                    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
                 </li>
             </ul>
-            <div id="logo">
-                <img  class="logo" src="static/img/logo.png" alt="" width="13%">
+            <div>
+                <img  class="logo" src="../static/img/logo.png" alt="" width="10%">
             </div>
         </nav>
-        
     </main>
-    <div id="search">
-        <div class="input">
-            <input id="searchBook" type="text"placeholder="search book here">
-            <a href="#"><i class="fa fa-fw fa-search" id="click"></i> </a> 
-        </div>
+    <div class="add-book">
+        <button id="addBook" onclick="onAddBook()">ADD BOOK</button>
     </div>
-    <div class="container">
-
+    
+    <div id="contain5">
+        <table>
+        </table>
     </div>
-
     <div id="dialog-info" style="display: none;">
         <dialog open>
           <section>
-            <label>Name</label>
+            <label>Book Name</label>
             <input id="name-Product" type="text" placeholder="Name Product" />
             
-            <label>Count</label>
-            <input id="price" type="number" placeholder="number"/>
-
             <label>Price</label>
             <input id="price" type="number" placeholder="Price"/>
-            
+
+            <label>Link of Book</label> 
+            <input id="image" type="text" placeholder="images"  id="avatar" name="avatar"/>
           </section>
-  
           <menu>
-            <button id="cancel" >Cancel</button>
-            <button id="create">Create</button>
+            <button id="cancel"  onclick="cencelBook()" >Cancel</button>
+            <button id="create" >Create</button>
           </menu>
         </dialog>
     </div>
-    <footer id="contact">
-        <a href="https://www.google.com/maps/place/Passerelles+num%C3%A9riques+Cambodia+(PNC)/@11.5508598,104.8789637,674m/data=!3m1!1e3!4m10!1m2!2m1!1spnc!3m6!1s0x310951add5e2cd81:0x171e0b69c7c6f7ba!8m2!3d11.5508598!4d104.8830836!15sCgNwbmMiA4gBAZIBB2NvbGxlZ2XgAQA!16s%2Fg%2F1tdbt6hf"><img   src="static/img/gps.png"   alt="" width="50px"></a>
-        <a href="023995500"><img src="static/img/call.png" alt="" width="50px"></a>
-        <a href="phallyhoeurng9@gmail"><img src="static/img/email.png" alt="" width="50px"></a>
-    </footer>
 </body>
-<script src="static/js/customer.js"></script>
+<script src="static/js/seller.js"></script>
 </html>
