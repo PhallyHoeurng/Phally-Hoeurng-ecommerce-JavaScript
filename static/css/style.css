@@ -319,3 +319,15 @@ footer img{
     height: 60px;
     margin: 30px;
 }
+
+@media screen and (max-width: 200px) {
+    .header img{
+      float: none;
+      display: block;
+    };
+  
+    .container5 table td th tr {
+        display: block;
+    }
+    
+  }
