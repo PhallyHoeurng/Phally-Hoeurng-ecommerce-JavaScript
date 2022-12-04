@@ -33,6 +33,12 @@ let products = [
 
     {name: 'GOD', price:19.29, img: 'static/img/God.jpg', rate: 3},
 
+    {name: 'សារភាពស្នេហ៍', price:100.29, img: 'static/img/love.jpg', rate: 4},
+
+    {name: 'WILD FLOWERS', price:10.29, img: 'static/img/the oxford.jpg', rate: 3},
+
+    {name: 'UNCLE WIGGLLY', price:100.29, img: 'static/img/UNCLE.JPG', rate: 2},
+    
 ]
 
 //create thead
@@ -181,8 +187,8 @@ function deleteProduct (event){
     createtable();
 }
 
-let lengthPro = products.length;
 
+let lengthPro = products.length;
 function editProduct(event){
     document.querySelector("menu").lastElementChild.textContent="Edit";
     let index = event.target.parentElement.parentElement.dataset.index;
