@@ -203,6 +203,6 @@ function editProduct(event){
 
 }
 
-// loadBook();  //
-saveBook();   // save
+loadBook();  //
+// saveBook();   // save
 createtable();
