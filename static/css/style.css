@@ -331,3 +331,22 @@ footer img{
     }
     
   }
+.add_book{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.para_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -50px;
+}
+.button_form{
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+.create_form{
+    background: #e91717;
+}

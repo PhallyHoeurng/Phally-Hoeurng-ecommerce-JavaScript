@@ -21,16 +21,23 @@
             </div>
         </nav>
     </main>
-    <div class="add-book">
-        <button id="addBook" onclick="onAddBook()">ADD BOOK</button>
+    <div class="add_book">
+
+        <div class="add-book">
+            <button id="addBook" onclick="onAddBook()">Welcome To add new book!</button>
+        </div>
+        <div class="add-book">
+            <button id="addBook" onclick="onAddBook()">ADD New BOOK</button>
+        </div>
+        
     </div>
-    
     <div id="contain5">
         <table>
         </table>
     </div>
-    <div id="dialog-info" style="display: none;">
+    <div id="dialog-info" class="create_form" style="display: none;">
         <dialog open>
+            <P class="para_form">Create Book Here!</P>
           <section>
             <label>Book Name</label>
             <input id="name-Product" type="text" placeholder="Name Product" />
@@ -41,7 +48,7 @@
             <label>Link of Book</label> 
             <input id="image" type="text" placeholder="images"  id="avatar" name="avatar"/>
           </section>
-          <menu>
+          <menu class="button_form">
             <button id="cancel"  onclick="cencelBook()" >Cancel</button>
             <button id="create" >Create</button>
           </menu>
